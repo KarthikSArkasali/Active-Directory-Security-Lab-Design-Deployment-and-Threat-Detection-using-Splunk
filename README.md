@@ -10,8 +10,8 @@ This project demonstrates how to build and secure an Active Directory environmen
 6. **Analyze** telemetry in Splunk
 
 ## 🚀 Step 1: Logical Architecture  
- ![Logical Diagram](images/ad-logical-diagram.png)  
-Created a high‑level diagram in Draw.io showing VM roles, network segments, and Splunk infrastructure.
+ ![AD Project](https://github.com/user-attachments/assets/7c7c3952-39e0-43cb-be46-573c25a9c8eb)
+- Created a high‑level diagram in Draw.io showing VM roles, network segments, and Splunk infrastructure.
 
 ## 💻 Step 2: VM Deployment  
 | VM Name      | OS             | Role                   |
