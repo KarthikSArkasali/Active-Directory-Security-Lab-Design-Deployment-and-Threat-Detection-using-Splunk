@@ -1,13 +1,16 @@
 # Active Directory Security: Deployment, Monitoring with Splunk, and Attack Simulation
 
-This project demonstrates how to build and secure an Active Directory environment end‑to‑end. You’ll:
+## Project Objective
+The objective of this project is to **design, build, and secure a complete Active Directory (AD) environment** in a virtual lab setting. It focuses on hands-on implementation of cybersecurity principles, including:
 
-1. **Design** the logical architecture  
-2. **Deploy** virtual machines  
-3. **Instrument** Windows endpoints with Sysmon & Splunk  
-4. **Install** and configure Active Directory  
-5. **Test** security using brute‑force attacks (Kali) and Atomic Red Team  
-6. **Analyze** telemetry in Splunk
+- **Designing a logical AD architecture** with clearly defined roles and network segmentation
+- **Deploying and configuring virtual machines** for endpoint, domain controller, attacker, and log analysis roles
+- **Instrumenting Windows systems with Sysmon and Splunk** to generate and collect rich security telemetry
+- **Installing and managing Active Directory**, including user and organizational unit setup
+- **Simulating real-world attacks** using Kali Linux and Atomic Red Team to test security posture
+- **Detecting and analyzing malicious activity in Splunk** using Windows Event IDs and MITRE ATT&CK mappings
+
+This project enhances skills in AD administration, threat detection, SIEM integration, and cybersecurity monitoring in enterprise-like environments.
 
 ## 🚀 Step 1: Logical Architecture  
  ![AD Project](https://github.com/user-attachments/assets/7c7c3952-39e0-43cb-be46-573c25a9c8eb)
