@@ -13,7 +13,7 @@ The objective of this project is to **design, build, and secure a complete Activ
 This project enhances skills in AD administration, threat detection, SIEM integration, and cybersecurity monitoring in enterprise-like environments.
 
 ## 🚀 Step 1: Logical Architecture  
- ![AD Project](https://github.com/user-attachments/assets/7c7c3952-39e0-43cb-be46-573c25a9c8eb)
+ ![1  Block Diagram](https://github.com/user-attachments/assets/83e92b0b-b84e-4b3c-983a-98f7fd3ab9b3)
 - Created a high‑level diagram in Draw.io showing VM roles, network segments, and Splunk infrastructure.
 
 ## 💻 Step 2: VM Deployment  
@@ -24,11 +24,13 @@ This project enhances skills in AD administration, threat detection, SIEM integr
 | `Ubuntu-VM`  | Ubuntu Linux   | Splunk Indexer/Forwarder |
 | `Kali-VM`    | Kali Linux     | Attack Platform        |
 
-![Virtual Machines](https://github.com/user-attachments/assets/351792a7-830d-4ce6-94b5-30d10e717ae8)
-
+![2  Virtual Machines](https://github.com/user-attachments/assets/82c10b83-4cbc-4930-b177-4590fc1a1042)
 
 ## 🔧 Step 3: Sysmon & Splunk Setup  
-- **Sysmon** installed on both `Target-PC` and `AD-Server`  
+- **Sysmon** installed on both `Target-PC` and `AD-Server`
+
+![3 1 Sysmon](https://github.com/user-attachments/assets/553966b2-5f34-4496-a61b-2f90cade4727)
+
 - **Splunk Universal Forwarder** deployed on Windows hosts  
 - Verified Splunk Forwarder service was running and sending events  
 
@@ -37,7 +39,7 @@ This project enhances skills in AD administration, threat detection, SIEM integr
 | Target‑PC    | Sysmon & Splunk UF  | ✅ Forwarder active |
 | AD‑Server    | Sysmon & Splunk UF  | ✅ Forwarder active |
 
-![Splunk Forwarder](https://github.com/user-attachments/assets/bdd16c60-ba1a-4e4c-8999-0fb287674d9f)
+![3 2  Splunk Forwarder](https://github.com/user-attachments/assets/4e405cbd-ee9d-42ad-9f0b-e4659a90a42a)
 
 ## 🏗 Step 4: Active Directory Installation  
 1. Promoted `AD-Server` to domain controller for `karthik.domain`  
@@ -47,12 +49,11 @@ This project enhances skills in AD administration, threat detection, SIEM integr
 
 ### 1. Organizational Unit HR: 
 
-![HR](https://github.com/user-attachments/assets/06834537-9eb4-498c-bb6e-ae00d89a776f)
+![4  HR](https://github.com/user-attachments/assets/1993814f-d1d8-4d4f-991e-b9d53b73fa65)
 
 ### 2. Organizational Unit IT: 
 
-![IT](https://github.com/user-attachments/assets/bb01c6a6-0145-49b1-b304-32e089b992d7)
-
+![5  IT](https://github.com/user-attachments/assets/2bf234b8-8169-440b-bdf2-a62333f8a0a6)
 
 ## 🛡 Step 5: Attack Simulation & Telemetry Analysis  
 
@@ -66,16 +67,17 @@ This project enhances skills in AD administration, threat detection, SIEM integr
 | 4624     | Successful login attempts |   1   |
 
 #### 1. RDP Brute‑Force (Kali → Target‑PC)
-![RDP Brute](https://github.com/user-attachments/assets/a42ada35-a4bf-4498-b8d3-4d901951ed45)
+![6  RDP Brute](https://github.com/user-attachments/assets/dbb8c7ac-99e2-4d7e-a932-df26b16adc95)
 
 #### 2. Event ID 4625(failed logins):
 
-![4625 Count](https://github.com/user-attachments/assets/ab1f6fb0-1cc1-4928-b8a8-b589aa2ec13d)
+![7  4625 Count](https://github.com/user-attachments/assets/3e7c921f-4945-4e80-9721-0e9f3608c43d)
+
+![9  Failed login](https://github.com/user-attachments/assets/910091b8-ccaa-4ecb-8484-3117cb6c82a6)
 
 #### 3. Event ID 4624(successful logins):
 
-![Successful login](https://github.com/user-attachments/assets/5f82705a-5e4e-475f-a03c-95dd9222feed)
-
+![8  Successful login](https://github.com/user-attachments/assets/30ad985f-b835-497e-bb65-be2aaa752f70)
 
 ### 5.2 Atomic Red Team (ART) Testing  
 - Installed ART on `Target-PC`  
@@ -85,13 +87,13 @@ This project enhances skills in AD administration, threat detection, SIEM integr
   - **PowerShell** activity  
 
 #### 1. Create Local Account (T1136.001) 
-![T1136 001](https://github.com/user-attachments/assets/c9013d1f-e0dd-4ef2-9414-a0f1f750aaff)
+![10  T1136 001](https://github.com/user-attachments/assets/d6385e52-9f08-47bc-b37c-0abbdd6d328a)
 
 #### 2. Command & Scripting Interpreter (T1059.001)
-![T1059 001](https://github.com/user-attachments/assets/91c57db3-f7a2-4882-a01f-81dfa7a8621b)
+![11  T1059 001](https://github.com/user-attachments/assets/c2988837-4457-40f4-a551-3de479e65684)
 
 #### 3.  Powershell Activity
-![Powershell](https://github.com/user-attachments/assets/dd312e15-f256-4f58-adfc-47a5ee9b5fde)
+![12  Powershell](https://github.com/user-attachments/assets/5dd06c30-4874-4ffd-b28e-fd71f8e23552)
 
 
 ## 🔍 What You’ll Learn  
@@ -100,7 +102,3 @@ This project enhances skills in AD administration, threat detection, SIEM integr
 - Collecting and visualizing security events in Splunk  
 - Simulating real‑world attacks and validating detection  
 - Mapping ATT&CK techniques to actual log events  
-
-
-
-
